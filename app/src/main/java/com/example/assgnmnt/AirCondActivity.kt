@@ -179,7 +179,8 @@ class AirCondActivity : AppCompatActivity() {
         swAu = findViewById(R.id.swAuto)
         swNo = findViewById(R.id.swNotify)
         val sharedPrefes: SharedPreferences = getPreferences(Context.MODE_PRIVATE)
-        if(sharedPrefes.getString("1",swOn)!= null) {
+        val swOn1 = sharedPrefes.getString("1",null)
+        if(swOn1!= null) {
             editOn.setText(sharedPrefes.getString("1", swOn))
             editOff.setText(sharedPrefes.getString("2", swOff))
             editNo.setText(sharedPrefes.getString("3", notifyOn))

@@ -256,7 +256,8 @@ class LightActivity : AppCompatActivity() {
 
     private fun loadPrefer(){
         val sharedPrefer: SharedPreferences = getPreferences(Context.MODE_PRIVATE)
-        if(sharedPrefer.getString("1",auto)!=null){
+        val auto1 = sharedPrefer.getString("1",null)
+        if(auto1!=null){
             if(sharedPrefer.getString("1", auto)=="true"){
                 autoSwitch.isChecked = true
             }
